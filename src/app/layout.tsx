@@ -1,5 +1,7 @@
+import { MonitorSmartphone, ShoppingCart } from 'lucide-react'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import Link from 'next/link'
 import './globals.css'
 
 const geistSans = Geist({
@@ -18,13 +20,37 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-	children
+	children,
+	ads
 }: Readonly<{
 	children: React.ReactNode
+	ads: React.ReactNode
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				<main className='flex min-h-screen flex-col justify-between'>
+					<header className='fixed z-50 flex h-20 w-full items-center justify-between bg-white px-20 shadow-xl'>
+						<div className='flex items-center gap-x-2'>
+							<MonitorSmartphone />
+							<Link
+								href='/'
+								className='text-2xl font-bold'
+							>
+								Digital shop
+							</Link>
+						</div>
+						<div>
+							<ShoppingCart />
+						</div>
+					</header>
+					<div className='mt-28 px-20'>{children}</div>
+					<aside className='mx-auto my-10 flex justify-center'>{ads}</aside>
+					<footer className='flex h-10 w-full items-center justify-center bg-black text-white'>
+						<p>@copy 2025 digital store afsun</p>
+					</footer>
+				</main>
+			</body>
 		</html>
 	)
 }

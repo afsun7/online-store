@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Ads = () => {
 	return (
-		<Card className='flex w-3/4 items-center justify-between'>
+		<Card className='flex w-3/4 flex-row items-center justify-between'>
 			<div>
 				<CardHeader>
 					<CardTitle>on sale product</CardTitle>
@@ -16,7 +16,7 @@ const Ads = () => {
 				</CardFooter>
 			</div>
 			<Image
-				src='/assets/ads.jpg'
+				src='/mock/iphone+.webp'
 				width={300}
 				height={200}
 				alt='ads'

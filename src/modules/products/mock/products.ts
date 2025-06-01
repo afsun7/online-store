@@ -5,7 +5,7 @@ export const data = [
 		category: 'MOBILE',
 		price: '1200',
 		quantity: 10,
-		images: [{ image: '' }, { image: '' }]
+		images: [{ image: '/mock/iphone16.jpg' }, { image: '/mock/iphone+.webp' }]
 	},
 	{
 		id: 2,
@@ -13,6 +13,6 @@ export const data = [
 		category: 'WATCH',
 		price: '500',
 		quantity: 20,
-		images: [{ image: '' }]
+		images: [{ image: '/mock/watch.webp' }]
 	}
 ]

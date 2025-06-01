@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { GalleryThumbnails, Heart } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const ProductItem = async (props: { product: any }) => {
@@ -9,12 +10,12 @@ const ProductItem = async (props: { product: any }) => {
 		<Card className='w-[400px] transform transition-transform duration-300 hover:scale-105'>
 			<CardHeader>
 				<div className='relative h-[300px] w-full'>
-					{/* <Image
-						src={product?.images[0]?.image || 'assets/noImage.jpg'}
+					<Image
+						src={product?.images[0]?.image || '/not-image'}
 						alt={product?.name}
 						fill
 						className='rounded-t-lg object-cover'
-					/> */}
+					/>
 				</div>
 			</CardHeader>
 			<CardContent>
